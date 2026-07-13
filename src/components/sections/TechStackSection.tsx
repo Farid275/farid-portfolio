@@ -6,33 +6,33 @@ import { techStacks } from "@/data/portfolio";
 
 export function TechStackSection() {
   return (
-    <AnimatedSection id="tech" className="px-6 py-28">
-      <div className="mx-auto max-w-6xl">
+    <section id="skills" className="w-full bg-[#FCFBFA]">
+      <AnimatedSection className="mx-auto max-w-6xl px-6 py-28">
         <SectionHeader
-          eyebrow="Tech Stack"
+          eyebrow="Skills"
           title="Tools and technologies"
           description="A focused set of technologies for building structured web applications and database-driven systems."
         />
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {techStacks.map((group) => (
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {techStacks.map((category) => (
             <MotionCard
-              key={group.category}
-              className="group overflow-hidden rounded-[2rem] border border-[#EFEBE9] bg-white p-8 shadow-sm transition-all duration-300 hover:border-slate-400 hover:shadow-xl hover:shadow-slate-400/5"
+              key={category.category}
+              className="group overflow-hidden rounded-[2rem] border border-[#E5E7EB] bg-[#FFFFFF] p-8 shadow-sm transition-all duration-300 hover:border-[#CBD5E1] hover:shadow-xl hover:shadow-[#334155]/5"
             >
-              <h3 className="text-xl font-bold text-slate-800">
-                {group.category}
+              <h3 className="mb-6 text-xl font-bold text-[#1E293B]">
+                {category.category}
               </h3>
 
               <div className="mt-6 flex flex-wrap gap-2.5">
-                {group.items.map((item) => (
+                {category.items.map((item) => (
                   <TechBadge key={item} label={item} />
                 ))}
               </div>
             </MotionCard>
           ))}
         </div>
-      </div>
-    </AnimatedSection>
+      </AnimatedSection>
+    </section>
   );
 }

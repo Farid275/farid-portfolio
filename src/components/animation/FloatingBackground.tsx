@@ -6,31 +6,17 @@ export function FloatingBackground() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      <motion.div
-        animate={
-          shouldReduceMotion
-            ? undefined
-            : {
-                x: [0, 24, 0],
-                y: [0, -18, 0],
-              }
-        }
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute -right-20 top-20 h-96 w-96 rounded-full bg-[#B2C2B3]/20 blur-[100px]"
-      />
+    <div className="pointer-events-none absolute inset-0 overflow-hidden bg-[#FCFBFA]">
+      <div className="absolute inset-0 bg-grid-pattern opacity-30 [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]" />
 
+      {/* Soft radial glow on the right side behind hero */}
       <motion.div
         animate={
           shouldReduceMotion
             ? undefined
             : {
-                x: [0, -20, 0],
-                y: [0, 20, 0],
+                x: [0, -30, 0],
+                opacity: [0.4, 0.6, 0.4],
               }
         }
         transition={{
@@ -38,16 +24,17 @@ export function FloatingBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -left-20 top-40 h-[26rem] w-[26rem] rounded-full bg-violet-300/15 blur-[100px]"
+        className="absolute -right-40 top-10 h-[40rem] w-[40rem] rounded-full bg-[#EFEBE9]/40 blur-[120px]"
       />
-      
+
+      {/* Soft neutral glow on the left */}
       <motion.div
         animate={
           shouldReduceMotion
             ? undefined
             : {
-                x: [0, 30, 0],
-                y: [0, -30, 0],
+                y: [0, -40, 0],
+                opacity: [0.3, 0.5, 0.3],
               }
         }
         transition={{
@@ -55,7 +42,25 @@ export function FloatingBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute left-1/3 top-1/2 h-80 w-80 rounded-full bg-slate-400/15 blur-[100px]"
+        className="absolute -left-20 top-1/3 h-[30rem] w-[30rem] rounded-full bg-[#F8F5F2]/60 blur-[120px]"
+      />
+      
+      {/* Subtle center accent */}
+      <motion.div
+        animate={
+          shouldReduceMotion
+            ? undefined
+            : {
+                x: [0, 20, 0],
+                y: [0, 30, 0],
+              }
+        }
+        transition={{
+          duration: 18,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute left-1/3 top-2/3 h-[20rem] w-[20rem] rounded-full bg-[#EFEBE9]/30 blur-[100px]"
       />
     </div>
   );

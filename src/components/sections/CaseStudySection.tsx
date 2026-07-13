@@ -27,8 +27,8 @@ const caseStudyItems = [
 
 export function CaseStudySection() {
   return (
-    <AnimatedSection className="px-6 py-28 bg-[#EFEBE9]/50">
-      <div className="mx-auto max-w-6xl">
+    <section id="case-study" className="w-full overflow-hidden bg-[#FCFBFA]">
+      <AnimatedSection className="relative mx-auto max-w-6xl px-6 py-28 z-10">
         <SectionHeader
           eyebrow="Case Study"
           title="EduManage course management system"
@@ -39,23 +39,23 @@ export function CaseStudySection() {
           {caseStudyItems.map((item, index) => (
             <MotionCard
               key={item.title}
-              className="group relative overflow-hidden rounded-[2rem] border border-[#EFEBE9] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-400 hover:shadow-xl hover:shadow-slate-400/5"
+              className="group relative overflow-hidden rounded-[2rem] border border-[#E5E7EB] bg-[#FFFFFF] p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#CBD5E1] hover:shadow-xl hover:shadow-[#334155]/5"
             >
-              <div className="absolute right-0 top-0 opacity-5 transition-opacity duration-300 group-hover:opacity-10 text-[8rem] font-bold leading-none select-none text-slate-400 -mt-6 -mr-4">
+              <div className="absolute right-0 top-0 opacity-[0.03] transition-opacity duration-300 group-hover:opacity-[0.05] text-[8rem] font-bold leading-none select-none text-[#1E293B] -mt-6 -mr-4">
                 0{index + 1}
               </div>
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-slate-800">
+                <h3 className="text-2xl font-bold text-[#1E293B]">
                   {item.title}
                 </h3>
-                <p className="mt-4 text-base leading-relaxed text-slate-500">
+                <p className="mt-4 text-base leading-relaxed text-[#64748B]">
                   {item.description}
                 </p>
               </div>
             </MotionCard>
           ))}
         </div>
-      </div>
-    </AnimatedSection>
+      </AnimatedSection>
+    </section>
   );
 }

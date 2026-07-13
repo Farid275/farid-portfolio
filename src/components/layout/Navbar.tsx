@@ -1,23 +1,33 @@
 export function Navbar() {
+  const menuItems = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Education", href: "#education" },
+    { label: "Blog", href: "#blog" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-[#EFEBE9] bg-white/70 backdrop-blur-xl transition-all duration-300">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="text-base font-bold tracking-tight text-slate-800 transition hover:text-slate-400">
-          Farid<span className="text-slate-400">.dev</span>
+    <nav className="fixed top-0 z-50 w-full border-b border-[#E5E7EB] bg-[#FFFFFF]/90 backdrop-blur-md">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+        <a href="#home" className="text-base font-bold tracking-tight text-[#1E293B] transition hover:text-[#334155]">
+          Farid<span className="text-[#334155]">.dev</span>
         </a>
 
-        <div className="hidden items-center gap-8 text-sm font-medium text-slate-500 md:flex">
-          {["About", "Tech Stack", "Projects", "Contact"].map((item) => (
+        <div className="hidden items-center gap-8 md:flex">
+          {menuItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase().replace(" ", "-")}`}
-              className="relative transition-colors hover:text-slate-800 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-slate-400 after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100 pb-1"
+              key={item.label}
+              href={item.href}
+              className="relative text-sm font-semibold text-[#64748B] transition-colors hover:text-[#1E293B] active:text-[#334155] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-[#334155] after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100"
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 }
