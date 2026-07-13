@@ -27,7 +27,7 @@ const caseStudyItems = [
 
 export function CaseStudySection() {
   return (
-    <AnimatedSection className="bg-white px-6 py-24">
+    <AnimatedSection className="px-6 py-28 bg-[#EFEBE9]/50">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Case Study"
@@ -35,19 +35,23 @@ export function CaseStudySection() {
           description="A concise case study showing how the project is structured and what problem it tries to solve."
         />
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {caseStudyItems.map((item) => (
+        <div className="grid gap-8 md:grid-cols-2">
+          {caseStudyItems.map((item, index) => (
             <MotionCard
               key={item.title}
-              className="rounded-3xl border border-slate-200 bg-slate-50 p-7 shadow-sm"
+              className="group relative overflow-hidden rounded-[2rem] border border-[#EFEBE9] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-400 hover:shadow-xl hover:shadow-slate-400/5"
             >
-              <h3 className="text-xl font-bold text-slate-950">
-                {item.title}
-              </h3>
-
-              <p className="mt-4 text-base leading-7 text-slate-600">
-                {item.description}
-              </p>
+              <div className="absolute right-0 top-0 opacity-5 transition-opacity duration-300 group-hover:opacity-10 text-[8rem] font-bold leading-none select-none text-slate-400 -mt-6 -mr-4">
+                0{index + 1}
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold text-slate-800">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-slate-500">
+                  {item.description}
+                </p>
+              </div>
             </MotionCard>
           ))}
         </div>

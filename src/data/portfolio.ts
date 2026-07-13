@@ -37,7 +37,7 @@ export const projects = [
       "Database integration",
       "Structured academic data management",
     ],
-    githubUrl: "",
+    githubUrl: "https://github.com/Farid275/farid-portfolio",
     demoUrl: "",
   },
 ];

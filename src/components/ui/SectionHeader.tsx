@@ -10,19 +10,19 @@ export function SectionHeader({
   description,
 }: SectionHeaderProps) {
   return (
-    <div className="mx-auto mb-10 max-w-3xl text-center">
+    <div className="mx-auto mb-16 max-w-2xl text-center">
       {eyebrow && (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-amber-600">
+        <p className="mb-4 inline-block rounded-full bg-slate-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-slate-400 shadow-sm ring-1 ring-[#EFEBE9]">
           {eyebrow}
         </p>
       )}
 
-      <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+      <h2 className="text-3xl font-bold tracking-tight text-slate-800 md:text-5xl">
         {title}
       </h2>
 
       {description && (
-        <p className="mt-4 text-base leading-7 text-slate-600">
+        <p className="mt-6 text-lg leading-relaxed text-slate-500">
           {description}
         </p>
       )}

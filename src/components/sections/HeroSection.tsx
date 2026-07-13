@@ -29,12 +29,12 @@ export function HeroSection() {
         variants={shouldReduceMotion ? undefined : containerVariants}
         initial={shouldReduceMotion ? false : "hidden"}
         animate={shouldReduceMotion ? undefined : "visible"}
-        className="relative z-10 max-w-3xl"
+        className="relative z-10 max-w-4xl"
       >
         <motion.p
           variants={shouldReduceMotion ? undefined : itemVariants}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-amber-600"
+          className="mb-6 inline-block rounded-full bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-slate-400 shadow-sm ring-1 ring-[#EFEBE9]"
         >
           Developer Portfolio
         </motion.p>
@@ -42,7 +42,7 @@ export function HeroSection() {
         <motion.h1
           variants={shouldReduceMotion ? undefined : itemVariants}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-4xl font-bold tracking-tight text-slate-950 md:text-6xl"
+          className="text-5xl font-extrabold tracking-tight text-slate-800 md:text-7xl lg:text-[5rem] lg:leading-[1.1]"
         >
           {profile.role}
         </motion.h1>
@@ -50,7 +50,7 @@ export function HeroSection() {
         <motion.p
           variants={shouldReduceMotion ? undefined : itemVariants}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mt-6 max-w-2xl text-lg leading-8 text-slate-600"
+          className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-500 md:text-xl"
         >
           {profile.headline}
         </motion.p>
@@ -58,18 +58,21 @@ export function HeroSection() {
         <motion.div
           variants={shouldReduceMotion ? undefined : itemVariants}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mt-8 flex flex-wrap gap-4"
+          className="mt-10 flex flex-wrap items-center gap-4"
         >
           <a
             href="#projects"
-            className="rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-800"
+            className="group flex h-12 items-center justify-center rounded-full bg-slate-400 px-8 text-sm font-semibold text-white transition-all hover:bg-slate-500 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-slate-400/20 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
           >
             View Projects
+            <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
           </a>
 
           <a
             href="#contact"
-            className="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5 hover:border-amber-400"
+            className="flex h-12 items-center justify-center rounded-full border border-[#EFEBE9] bg-white px-8 text-sm font-semibold text-slate-800 transition-all hover:border-violet-300 hover:bg-[#F8F5F2] hover:text-slate-800 focus:outline-none focus:ring-2 focus:ring-violet-300 focus:ring-offset-2"
           >
             Contact Me
           </a>
@@ -78,15 +81,20 @@ export function HeroSection() {
         <motion.div
           variants={shouldReduceMotion ? undefined : itemVariants}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mt-10 flex flex-wrap gap-3 text-sm text-slate-600"
+          className="mt-16 flex flex-wrap items-center gap-6 text-sm font-medium text-slate-500"
         >
-          <span>Next.js</span>
-          <span>•</span>
-          <span>TypeScript</span>
-          <span>•</span>
-          <span>Tailwind CSS</span>
-          <span>•</span>
-          <span>Supabase</span>
+          <span className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-slate-400"></span> Next.js
+          </span>
+          <span className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#B2C2B3]"></span> TypeScript
+          </span>
+          <span className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-slate-400"></span> Tailwind CSS
+          </span>
+          <span className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-violet-300"></span> Supabase
+          </span>
         </motion.div>
       </motion.div>
     </section>

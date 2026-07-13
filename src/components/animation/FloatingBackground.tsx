@@ -21,7 +21,7 @@ export function FloatingBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute right-10 top-24 h-72 w-72 rounded-full bg-amber-200/30 blur-3xl"
+        className="absolute -right-20 top-20 h-96 w-96 rounded-full bg-[#B2C2B3]/20 blur-[100px]"
       />
 
       <motion.div
@@ -38,7 +38,24 @@ export function FloatingBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute left-0 top-40 h-80 w-80 rounded-full bg-blue-200/30 blur-3xl"
+        className="absolute -left-20 top-40 h-[26rem] w-[26rem] rounded-full bg-violet-300/15 blur-[100px]"
+      />
+      
+      <motion.div
+        animate={
+          shouldReduceMotion
+            ? undefined
+            : {
+                x: [0, 30, 0],
+                y: [0, -30, 0],
+              }
+        }
+        transition={{
+          duration: 15,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute left-1/3 top-1/2 h-80 w-80 rounded-full bg-slate-400/15 blur-[100px]"
       />
     </div>
   );
