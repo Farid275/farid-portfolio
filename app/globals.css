@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAF9F6; /* Clean off-white background */
-  --foreground: #181818; /* Primary slate text */
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 @theme inline {
@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #181818;
-    --foreground: #FAF9F6;
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
@@ -23,21 +23,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
-::selection {
-  background: #4B5563; /* Interaction accent blue */
-  color: #FFFFFF;
-}
-
-.bg-grid-pattern {
-  background-image: radial-gradient(#E2E0DA 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-
