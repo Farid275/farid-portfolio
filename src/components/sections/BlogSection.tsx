@@ -22,7 +22,7 @@ const notes = [
 
 export function BlogSection() {
   return (
-    <section id="blog" className="w-full bg-[#F8F5F2]">
+    <section id="blog" className="w-full bg-[#FAF9F6]">
       <AnimatedSection className="mx-auto max-w-6xl px-6 py-28">
         <SectionHeader
           eyebrow="Blog"
@@ -34,15 +34,15 @@ export function BlogSection() {
           {notes.map((note) => (
             <MotionCard
               key={note.title}
-              className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-[#E5E7EB] bg-[#FFFFFF] p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#CBD5E1] hover:shadow-xl hover:shadow-[#334155]/5"
+              className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-[#E2E0DA] bg-[#FFFFFF] p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#4B5563] hover:shadow-xl hover:shadow-[#252525]/5"
             >
-              <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#64748B]">
+              <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#4A4A4A]">
                 {note.date}
               </div>
-              <h3 className="mb-3 text-xl font-bold text-[#1E293B]">
+              <h3 className="mb-3 text-xl font-bold text-[#181818]">
                 {note.title}
               </h3>
-              <p className="flex-1 text-base leading-relaxed text-[#64748B]">
+              <p className="flex-1 text-base leading-relaxed text-[#4A4A4A]">
                 {note.description}
               </p>
             </MotionCard>

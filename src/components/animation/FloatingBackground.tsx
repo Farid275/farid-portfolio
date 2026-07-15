@@ -6,7 +6,7 @@ export function FloatingBackground() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden bg-[#FCFBFA]">
+    <div className="pointer-events-none absolute inset-0 overflow-hidden bg-[#FAF9F6]">
       <div className="absolute inset-0 bg-grid-pattern opacity-30 [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]" />
 
       {/* Soft radial glow on the right side behind hero */}
@@ -24,7 +24,7 @@ export function FloatingBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -right-40 top-10 h-[40rem] w-[40rem] rounded-full bg-[#EFEBE9]/40 blur-[120px]"
+        className="absolute -right-40 top-10 h-[40rem] w-[40rem] rounded-full bg-[#F1F0EC]/40 blur-[120px]"
       />
 
       {/* Soft neutral glow on the left */}
@@ -42,7 +42,7 @@ export function FloatingBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -left-20 top-1/3 h-[30rem] w-[30rem] rounded-full bg-[#F8F5F2]/60 blur-[120px]"
+        className="absolute -left-20 top-1/3 h-[30rem] w-[30rem] rounded-full bg-[#FAF9F6]/60 blur-[120px]"
       />
       
       {/* Subtle center accent */}
@@ -60,7 +60,7 @@ export function FloatingBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute left-1/3 top-2/3 h-[20rem] w-[20rem] rounded-full bg-[#EFEBE9]/30 blur-[100px]"
+        className="absolute left-1/3 top-2/3 h-[20rem] w-[20rem] rounded-full bg-[#F1F0EC]/30 blur-[100px]"
       />
     </div>
   );

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fcfbfa; /* Clean off-white background */
-  --foreground: #1e293b; /* Primary slate text */
+  --background: #FAF9F6; /* Clean off-white background */
+  --foreground: #181818; /* Primary slate text */
 }
 
 @theme inline {
@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1e293b;
-    --foreground: #fcfbfa;
+    --background: #181818;
+    --foreground: #FAF9F6;
   }
 }
 
@@ -32,12 +32,12 @@ html {
 }
 
 ::selection {
-  background: #3b82f6; /* Interaction accent blue */
-  color: #ffffff;
+  background: #4B5563; /* Interaction accent blue */
+  color: #FFFFFF;
 }
 
 .bg-grid-pattern {
-  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-image: radial-gradient(#E2E0DA 1px, transparent 1px);
   background-size: 32px 32px;
 }
 

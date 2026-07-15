@@ -35,7 +35,7 @@ export function HeroSection() {
           <motion.p
             variants={shouldReduceMotion ? undefined : itemVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mb-6 inline-block rounded-full bg-[#F3F4F6] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#1E293B] shadow-sm ring-1 ring-[#E5E7EB]"
+            className="mb-6 inline-block rounded-full bg-[#F1F0EC] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#181818] shadow-sm ring-1 ring-[#E2E0DA]"
           >
             Developer Portfolio
           </motion.p>
@@ -43,7 +43,7 @@ export function HeroSection() {
           <motion.h1
             variants={shouldReduceMotion ? undefined : itemVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-5xl font-extrabold tracking-tight text-[#1E293B] md:text-7xl lg:text-[5rem] lg:leading-[1.1]"
+            className="text-5xl font-extrabold tracking-tight text-[#181818] md:text-7xl lg:text-[5rem] lg:leading-[1.1]"
           >
             {profile.role}
           </motion.h1>
@@ -51,7 +51,7 @@ export function HeroSection() {
           <motion.p
             variants={shouldReduceMotion ? undefined : itemVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mt-8 max-w-2xl text-lg leading-relaxed text-[#64748B] md:text-xl"
+            className="mt-8 max-w-2xl text-lg leading-relaxed text-[#4A4A4A] md:text-xl"
           >
             {profile.headline}
           </motion.p>
@@ -64,7 +64,7 @@ export function HeroSection() {
           >
             <a
               href="#contact"
-              className="group flex h-12 items-center justify-center rounded-full bg-[#334155] px-8 text-sm font-bold text-[#FFFFFF] transition-all hover:bg-[#475569] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#334155]/20 focus:outline-none focus:ring-2 focus:ring-[#334155] focus:ring-offset-2"
+              className="group flex h-12 items-center justify-center rounded-full bg-[#252525] px-8 text-sm font-bold text-[#FFFFFF] transition-all hover:bg-[#4B5563] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#252525]/20 focus:outline-none focus:ring-2 focus:ring-[#252525] focus:ring-offset-2"
             >
               Get in Touch
               <svg
@@ -80,7 +80,7 @@ export function HeroSection() {
 
             <a
               href="#projects"
-              className="flex h-12 items-center justify-center rounded-full border border-[#E5E7EB] bg-[#FFFFFF] px-8 text-sm font-bold text-[#1E293B] transition-all hover:border-[#CBD5E1] hover:bg-[#F8F5F2] focus:outline-none focus:ring-2 focus:ring-[#334155] focus:ring-offset-2"
+              className="flex h-12 items-center justify-center rounded-full border border-[#E2E0DA] bg-[#FFFFFF] px-8 text-sm font-bold text-[#181818] transition-all hover:border-[#4B5563] hover:bg-[#FAF9F6] focus:outline-none focus:ring-2 focus:ring-[#252525] focus:ring-offset-2"
             >
               View Work
             </a>
@@ -90,18 +90,18 @@ export function HeroSection() {
             variants={shouldReduceMotion ? undefined : itemVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <div className="mt-16 flex flex-wrap items-center gap-6 text-sm font-medium text-[#64748B]">
+            <div className="mt-16 flex flex-wrap items-center gap-6 text-sm font-medium text-[#4A4A4A]">
               <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#334155]"></span> Next.js
+                <span className="h-1.5 w-1.5 rounded-full bg-[#252525]"></span> Next.js
               </div>
               <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#334155]"></span> TypeScript
+                <span className="h-1.5 w-1.5 rounded-full bg-[#252525]"></span> TypeScript
               </div>
               <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#334155]"></span> Tailwind CSS
+                <span className="h-1.5 w-1.5 rounded-full bg-[#252525]"></span> Tailwind CSS
               </div>
               <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#334155]"></span> Supabase
+                <span className="h-1.5 w-1.5 rounded-full bg-[#252525]"></span> Supabase
               </div>
             </div>
           </motion.div>

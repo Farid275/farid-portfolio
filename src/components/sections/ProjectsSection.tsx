@@ -5,7 +5,7 @@ import { projects } from "@/data/portfolio";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="w-full bg-[#F8F5F2]">
+    <section id="projects" className="w-full bg-[#FAF9F6]">
       <AnimatedSection className="mx-auto max-w-6xl px-6 py-28">
         <SectionHeader
           eyebrow="Projects"
