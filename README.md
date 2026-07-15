@@ -20,8 +20,13 @@ A personal software engineering and full-stack developer portfolio built with Ne
 - Motion
 - Lenis
 
+## Live Demo
+
+https://farid-portfolio-sigma.vercel.app
+
 ## Getting Started
 
 ```bash
 npm install
 npm run dev
+
